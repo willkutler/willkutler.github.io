@@ -1,0 +1,73 @@
+// Variables only - this partial must not emit any CSS, so that every other
+// partial can pull it in without duplicating rules in the compiled output.
+
+/* ==========================================================================
+Colours
+==========================================================================
+The background wallpaper is a sage-green Morris-style damask, so the header
+blue is kept soft and slightly desaturated to sit against it calmly.
+*/
+
+$header-blue: #cddee5;
+$header-blue-dark: #b3ccd6; // header bottom border
+
+$txt-primary: #1c1c1c; // body copy, black per the design outline
+$txt-muted: #4a4a4a; // supporting/secondary lines
+$txt-light: #ffffff;
+
+$panel-bg: rgba(255, 255, 255, 0.93); // content cards over the wallpaper
+$panel-border: rgba(0, 0, 0, 0.07);
+
+$accent: #6a8f7b; // sage pulled from the wallpaper, used for links/hover
+$accent-dark: #4f6e5d;
+
+/* ==========================================================================
+Fonts
+==========================================================================
+The display font is a custom .otf shipped in this repo, so it is self-hosted
+with @font-face in _typography.scss. Everything else uses the system sans-serif
+stack (Arial/Helvetica), which needs no font files at all.
+*/
+
+$display-font: 'WillMayaTitle', 'Georgia', serif;
+$sans-serif: Arial, Helvetica, sans-serif;
+
+// Weights
+
+$normal: 400;
+$semibold: 600;
+$bold: 700;
+
+// Sizes
+
+$font-size-display: 92px; // "Maya and Will" on the home page
+$font-size-h1: 38px;
+$font-size-h2: 26px;
+$font-size-h3: 19px;
+$font-size-p: 17px;
+$nav-font-size: 14px;
+
+// Responsive sizes
+
+$responsive-display: 52px;
+$responsive-h1: 30px;
+$responsive-h2: 22px;
+
+// Line height
+
+$base-line-height: 1.7;
+
+/* ==========================================================================
+Header metrics
+==========================================================================
+The sample repo's header expands to 50px of padding and collapses to 35px on
+scroll. Per the design outline this header does not move at all: it is fixed at
+the collapsed height (a little thinner) with a solid colour behind it.
+*/
+
+$header-padding: 16px;
+$logo-height: 64px;
+$header-height: ($header-padding * 2) + $logo-height + 1; // +1 for the border
+
+// Width at which the nav collapses behind the hamburger.
+$mobile-breakpoint: 768px;

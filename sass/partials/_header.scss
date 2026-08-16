@@ -1,0 +1,108 @@
+// Header partial
+@use "variables" as *;
+
+/* ==========================================================================
+Header
+========================================================================== */
+.site-header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: 999;
+  background-color: $header-blue;
+  border-bottom: solid 1px $header-blue-dark;
+}
+
+.header-content {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 100%;
+  padding: $header-padding 20px;
+}
+
+.logo {
+  display: inline-block;
+  line-height: 0;
+
+  img {
+    height: $logo-height;
+    width: auto;
+  }
+}
+
+.site-nav {
+  margin-right: 10px;
+
+  ul {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+  }
+
+  li {
+    display: inline-block;
+  }
+
+  a {
+    display: inline-block;
+    padding: 4px 0;
+    margin-left: 30px;
+    color: $txt-primary;
+    font-size: $nav-font-size;
+    text-transform: uppercase;
+    letter-spacing: 0.09em;
+    text-decoration: none;
+
+    &:hover,
+    &:focus {
+      color: $accent-dark;
+      text-decoration: none;
+    }
+
+    // Current page gets a subtle underline rather than a colour change, so the
+    // nav stays legible against the pale blue.
+    &.is-active {
+      border-bottom: solid 2px $accent-dark;
+    }
+  }
+}
+
+// Hamburger button. Hidden on desktop, revealed at the mobile breakpoint.
+.nav-toggle {
+  display: none;
+  position: relative;
+  width: 30px;
+  height: 22px;
+  padding: 0;
+  border: 0;
+  background: transparent;
+  cursor: pointer;
+
+  span {
+    position: absolute;
+    left: 0;
+    display: block;
+    width: 100%;
+    height: 2px;
+    background-color: $txt-primary;
+    transition: transform 250ms ease-in-out, opacity 250ms ease-in-out;
+
+    &:nth-child(1) { top: 0; }
+    &:nth-child(2) { top: 10px; }
+    &:nth-child(3) { top: 20px; }
+  }
+
+  &.is-open span {
+    &:nth-child(1) { transform: translateY(10px) rotate(45deg); }
+    &:nth-child(2) { opacity: 0; }
+    &:nth-child(3) { transform: translateY(-10px) rotate(-45deg); }
+  }
+}
+
+// Pushes page content clear of the fixed header.
+.site-main {
+  padding-top: $header-height;
+}

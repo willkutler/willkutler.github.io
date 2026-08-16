@@ -1,0 +1,195 @@
+// Layout partial
+@use "variables" as *;
+
+/* ==========================================================================
+Base / background
+========================================================================== */
+
+*,
+*:before,
+*:after {
+  box-sizing: border-box;
+}
+
+html,
+body {
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  // The wallpaper is a seamless 740x740 tile, repeated on both axes per the
+  // design outline. It is scaled down so the pattern does not overwhelm the
+  // content sitting on top of it.
+  background-color: #cfdcc9; // fallback close to the wallpaper's sage
+  background-image: url('../assets/images/wallpaper-light.jpeg');
+  background-repeat: repeat;
+  background-size: 400px auto;
+  background-attachment: fixed;
+  background-position: top center;
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+}
+
+/* ==========================================================================
+Page shell
+========================================================================== */
+
+// Centres the content column in the middle of the page. Text inside is left
+// aligned (not centred, not justified) per the design outline.
+.container {
+  width: 820px;
+  max-width: 90%;
+  margin: 0 auto;
+}
+
+.page-section {
+  padding: 70px 0 90px;
+}
+
+// A translucent white card. The wallpaper is busy, so body copy needs a calm
+// surface behind it to stay readable.
+.panel {
+  background-color: $panel-bg;
+  border: solid 1px $panel-border;
+  border-radius: 3px;
+  padding: 46px 52px;
+  margin-bottom: 30px;
+  text-align: left;
+
+  &:last-child {
+    margin-bottom: 0;
+  }
+}
+
+.panel-title {
+  margin-bottom: 26px;
+  padding-bottom: 14px;
+  border-bottom: solid 1px $panel-border;
+}
+
+/* ==========================================================================
+Home page
+========================================================================== */
+
+.home-title-panel {
+  text-align: center;
+  padding: 54px 52px 46px;
+}
+
+.home-content-with-images {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-wrap: wrap; // if the min-widths below don't all fit, wrap rather than crush
+  gap: clamp(16px, 3vw, 44px);
+  margin-bottom: 30px;
+  width: 100%;
+  max-width: 1600px;
+  padding: 0 20px;
+  margin-left: auto;
+  margin-right: auto;
+
+  .panel {
+    // Grows to fill the space between the images, but is capped so it never
+    // gets squeezed thin or stretched too wide, and has a floor so it never
+    // shrinks down to a sliver.
+    flex: 1 1 420px;
+    min-width: 300px;
+    max-width: 860px;
+    margin-bottom: 0;
+  }
+}
+
+.home-image {
+  // A fixed target width (scaling gently with viewport width) rather than a
+  // flex percentage, so a large source image can't force its own size and
+  // squeeze the text panel.
+  flex: 0 0 clamp(140px, 22vw, 340px);
+  width: clamp(140px, 22vw, 340px);
+  min-width: 0;
+  height: auto;
+}
+
+.home-image-left {
+  order: -1;
+}
+
+.home-image-right {
+  order: 1;
+}
+
+.home-date {
+  margin: 18px 0 0;
+  font-size: 15px;
+  letter-spacing: 0.24em;
+  text-transform: uppercase;
+  color: $txt-muted;
+}
+
+/* ==========================================================================
+Schedule
+========================================================================== */
+
+.schedule-day {
+  margin-bottom: 34px;
+
+  &:last-child {
+    margin-bottom: 0;
+  }
+}
+
+.schedule-date {
+  margin-bottom: 6px;
+  color: $accent-dark;
+  font-size: 15px;
+  letter-spacing: 0.16em;
+  text-transform: uppercase;
+}
+
+.schedule-event {
+  padding: 14px 0;
+  border-bottom: solid 1px $panel-border;
+
+  &:last-child {
+    border-bottom: 0;
+    padding-bottom: 0;
+  }
+}
+
+.schedule-event-name {
+  margin: 0 0 4px;
+}
+
+.schedule-event-time {
+  margin: 0;
+  color: $txt-muted;
+}
+
+/* ==========================================================================
+FAQ
+========================================================================== */
+
+// Generous spacing between entries, per the design outline.
+.faq-item {
+  margin-bottom: 38px;
+
+  &:last-child {
+    margin-bottom: 0;
+  }
+}
+
+.faq-question {
+  margin-bottom: 8px;
+}
+
+/* ==========================================================================
+Placeholder pages
+========================================================================== */
+
+.placeholder-note {
+  color: $txt-muted;
+}

@@ -1,0 +1,17 @@
+{
+  "name": "will-maya-website",
+  "version": "0.1.0",
+  "description": "Will & Maya's wedding website. A static site hosted on GitHub Pages.",
+  "private": true,
+  "scripts": {
+    "build": "gulp",
+    "watch": "gulp watch"
+  },
+  "devDependencies": {
+    "gulp": "^4.0.2",
+    "gulp-file-include": "^2.3.0",
+    "gulp-rename": "^1.4.0",
+    "gulp-sass": "^5.0.0",
+    "sass": "^1.25.0"
+  }
+}

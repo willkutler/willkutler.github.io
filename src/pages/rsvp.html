@@ -1,0 +1,28 @@
+<!doctype html>
+<html class="no-js" lang="en">
+@@include('../partials/head.html', {
+    "title": "RSVP | Maya and Will",
+    "description": "RSVP for Maya and Will's wedding."
+})
+<body>
+@@include('../partials/header.html', {"active": "rsvp"})
+
+<main class="site-main">
+    <section class="page-section">
+        <div class="container">
+            <div class="panel">
+                <h1 class="panel-title">RSVP</h1>
+                <p>RSVP will go here.</p>
+                <!--
+                    When this is built out, the form posts to a Google Apps Script web app bound
+                    to a Google Sheet, which stores the responses and emails us on each reply.
+                    See the Questions section of design/will-maya-design-outline.md.
+                -->
+            </div>
+        </div>
+    </section>
+</main>
+
+@@include('../partials/footer.html')
+</body>
+</html>

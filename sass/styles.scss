@@ -1,0 +1,16 @@
+// Will & Maya's wedding website
+//
+// Built with `gulp` (see gulpfile.js), which compiles this file and its
+// partials down to css/styles.min.css.
+//
+// No web fonts are imported here: the display font is self-hosted via
+// @font-face in partials/_typography.scss, and body copy uses the system
+// Arial/Helvetica stack, which needs no font files.
+//
+// Partials use @use rather than @import so shared variables are evaluated once
+// and rules are never duplicated in the compiled output.
+
+@use "partials/typography";
+@use "partials/layout";
+@use "partials/header";
+@use "partials/queries";

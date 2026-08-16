@@ -1,0 +1,13 @@
+node_modules/
+
+# Note: the built .html files at the repo root and css/styles.min.css are
+# intentionally NOT ignored. GitHub Pages serves them directly, so they have to
+# be committed alongside the sources in src/ and sass/.
+
+.DS_Store
+*.log
+npm-debug.log*
+.idea/
+*.iml
+.sass-cache/
+*.css.map
