@@ -84,7 +84,11 @@ Home page
   display: flex;
   align-items: center;
   justify-content: center;
-  flex-wrap: wrap; // if the min-widths below don't all fit, wrap rather than crush
+  // No wrap: the row layout shrinks gracefully (image clamps + panel's
+  // flex-shrink) all the way down to $mobile-breakpoint, where the media
+  // query below switches everything to a column at once. Wrapping here let
+  // the two images peel off the row one at a time instead of together.
+  flex-wrap: nowrap;
   gap: clamp(16px, 3vw, 44px);
   margin-bottom: 30px;
   width: 100%;
@@ -125,6 +129,7 @@ Home page
 .home-date {
   margin: 18px 0 0;
   font-size: 15px;
+  font-weight: $bold;
   letter-spacing: 0.24em;
   text-transform: uppercase;
   color: $txt-muted;

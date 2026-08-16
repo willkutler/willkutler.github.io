@@ -83,7 +83,10 @@ plain CSS, so this works exactly the same on GitHub Pages as anywhere else.
   .home-content-with-images {
     flex-direction: column;
     gap: 20px;
-    max-width: 100%;
+    // Match .container's side margin so the panel doesn't run edge-to-edge.
+    max-width: 90%;
+    margin-left: auto;
+    margin-right: auto;
     padding: 0;
 
     .panel {
