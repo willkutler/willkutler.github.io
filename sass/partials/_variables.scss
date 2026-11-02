@@ -4,21 +4,21 @@
 /* ==========================================================================
 Colours
 ==========================================================================
-The background wallpaper is a sage-green Morris-style damask, so the header
-blue is kept soft and slightly desaturated to sit against it calmly.
+The page is a solid pale sage with a darker olive-green header.
 */
 
-$header-blue: #cddee5;
-$header-blue-dark: #b3ccd6; // header bottom border
+$header-bg: #88a652;
+$header-bg-dark: #769242; // header bottom border
+$page-bg: #dee1cc; // solid page background
 
 $txt-primary: #1c1c1c; // body copy, black per the design outline
 $txt-muted: #4a4a4a; // supporting/secondary lines
 $txt-light: #ffffff;
 
-$panel-bg: rgba(255, 255, 255, 0.93); // content cards over the wallpaper
+$panel-bg: rgba(255, 255, 255, 0.93); // content cards over the page background
 $panel-border: rgba(0, 0, 0, 0.07);
 
-$accent: #6a8f7b; // sage pulled from the wallpaper, used for links/hover
+$accent: #6a8f7b; // sage green, used for links/hover
 $accent-dark: #4f6e5d;
 
 /* ==========================================================================

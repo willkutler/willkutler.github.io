@@ -21,8 +21,8 @@ plain CSS, so this works exactly the same on GitHub Pages as anywhere else.
     left: 0;
     width: 100vw;
     margin-left: calc((100% - 100vw) / 2); // break out of the centred header
-    background-color: $header-blue;
-    border-bottom: solid 1px $header-blue-dark;
+    background-color: $header-bg;
+    border-bottom: solid 1px $header-bg-dark;
     max-height: 0;
     overflow: hidden;
     visibility: hidden;
@@ -109,13 +109,6 @@ plain CSS, so this works exactly the same on GitHub Pages as anywhere else.
 
   .home-image-right {
     order: 0;
-  }
-
-  body {
-    // A smaller tile keeps the pattern in proportion on narrow screens.
-    background-size: 260px auto;
-    // Fixed attachment is unreliable on mobile browsers, so let it scroll.
-    background-attachment: scroll;
   }
 }
 
