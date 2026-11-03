@@ -117,8 +117,14 @@ plain CSS, so this works exactly the same on GitHub Pages as anywhere else.
     font-size: $responsive-info-subheading;
   }
 
+  // Scale with the screen so every row stays on one line and the table as a
+  // whole stays centred, rather than wrapping and stretching to the left edge.
   .info-schedule {
-    font-size: $responsive-info-text;
+    font-size: clamp(11px, 3.4vw, $responsive-info-text);
+
+    td:first-child {
+      padding-right: 3vw;
+    }
   }
 
   .page-section {
