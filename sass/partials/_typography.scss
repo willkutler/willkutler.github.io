@@ -2,8 +2,16 @@
 @use "variables" as *;
 
 @font-face {
-  font-family: 'WillMayaTitle';
-  src: url('../assets/fonts/will-maya-home-title.otf') format('opentype');
+  font-family: 'RoyalTomato';
+  src: url('../assets/fonts/RoyalTomato-Regular.otf') format('opentype');
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'WANARASETA';
+  src: url('../assets/fonts/WANARASETA.otf') format('opentype');
   font-weight: normal;
   font-style: normal;
   font-display: swap;
@@ -70,5 +78,7 @@ a {
   font-weight: $normal;
   line-height: 1.15;
   margin: 0;
-  color: $txt-primary;
+  color: $title-color;
+  // Offset copy of the title 5px down and to the left, drawn under the green text.
+  text-shadow: -5px 5px 0 $home-text;
 }

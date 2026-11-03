@@ -72,59 +72,33 @@ Home page
   padding: 54px 52px 46px;
 }
 
-.home-content-with-images {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  // No wrap: the row layout shrinks gracefully (image clamps + panel's
-  // flex-shrink) all the way down to $mobile-breakpoint, where the media
-  // query below switches everything to a column at once. Wrapping here let
-  // the two images peel off the row one at a time instead of together.
-  flex-wrap: nowrap;
-  gap: clamp(16px, 3vw, 44px);
-  margin-bottom: 30px;
+.home-photo {
+  display: block;
   width: 100%;
-  max-width: 1600px;
-  padding: 0 20px;
-  margin-left: auto;
-  margin-right: auto;
-
-  .panel {
-    // Grows to fill the space between the images, but is capped so it never
-    // gets squeezed thin or stretched too wide, and has a floor so it never
-    // shrinks down to a sliver.
-    flex: 1 1 420px;
-    min-width: 300px;
-    max-width: 860px;
-    margin-bottom: 0;
-  }
-}
-
-.home-image {
-  // A fixed target width (scaling gently with viewport width) rather than a
-  // flex percentage, so a large source image can't force its own size and
-  // squeeze the text panel.
-  flex: 0 0 clamp(140px, 22vw, 340px);
-  width: clamp(140px, 22vw, 340px);
-  min-width: 0;
+  max-width: 420px;
   height: auto;
+  margin: 28px auto 0;
 }
 
-.home-image-left {
-  order: -1;
-}
-
-.home-image-right {
-  order: 1;
+.home-date,
+.home-venue {
+  font-family: $info-font;
+  font-weight: $normal;
+  color: $home-text;
+  text-transform: uppercase;
+  text-align: center;
 }
 
 .home-date {
   margin: 18px 0 0;
-  font-size: 15px;
-  font-weight: $bold;
-  letter-spacing: 0.24em;
-  text-transform: uppercase;
-  color: $txt-muted;
+  font-size: $font-size-date;
+  line-height: 1.2;
+}
+
+.home-venue {
+  margin: 22px 0 0;
+  font-size: $font-size-venue;
+  line-height: 1.3;
 }
 
 /* ==========================================================================

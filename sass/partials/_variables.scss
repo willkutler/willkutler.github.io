@@ -18,6 +18,10 @@ $txt-light: #ffffff;
 $panel-bg: rgba(255, 255, 255, 0.93); // content cards over the page background
 $panel-border: rgba(0, 0, 0, 0.07);
 
+$home-text: #004268; // date / venue lines under the home title
+
+$title-color: #88a652; // home title face
+
 $accent: #6a8f7b; // sage green, used for links/hover
 $accent-dark: #4f6e5d;
 
@@ -29,7 +33,8 @@ with @font-face in _typography.scss. Everything else uses the system sans-serif
 stack (Arial/Helvetica), which needs no font files at all.
 */
 
-$display-font: 'WillMayaTitle', 'Georgia', serif;
+$display-font: 'RoyalTomato', 'Georgia', serif;
+$info-font: 'WANARASETA', 'Georgia', serif;
 $sans-serif: Arial, Helvetica, sans-serif;
 
 // Weights
@@ -41,6 +46,8 @@ $bold: 700;
 // Sizes
 
 $font-size-display: 92px; // "Maya and Will" on the home page
+$font-size-date: $font-size-display * 0.5; // 50% of the title
+$font-size-venue: $font-size-display * 0.3; // 30% of the title
 $font-size-h1: 38px;
 $font-size-h2: 26px;
 $font-size-h3: 19px;
@@ -50,6 +57,8 @@ $nav-font-size: 14px;
 // Responsive sizes
 
 $responsive-display: 52px;
+$responsive-date: $responsive-display * 0.5;
+$responsive-venue: $responsive-display * 0.3;
 $responsive-h1: 30px;
 $responsive-h2: 22px;
 
