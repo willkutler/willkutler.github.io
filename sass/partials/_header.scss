@@ -70,6 +70,32 @@ Header
   }
 }
 
+// Image buttons (schedule / travel / rsvp) replace the text links. The art has
+// its own framing, so drop the text-link padding and underline treatment.
+.site-nav a.nav-button {
+  padding: 0;
+  line-height: 0;
+  vertical-align: middle;
+  transition: transform 150ms ease-in-out;
+
+  img {
+    height: $nav-button-height;
+    width: auto;
+    display: block;
+  }
+
+  &:hover,
+  &:focus {
+    transform: scale(1.06);
+  }
+
+  &.is-active {
+    border-bottom: 0;
+    filter: brightness(1.08);
+    transform: scale(1.06);
+  }
+}
+
 // Hamburger button. Hidden on desktop, revealed at the mobile breakpoint.
 .nav-toggle {
   display: none;
