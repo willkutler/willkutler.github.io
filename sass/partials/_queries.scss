@@ -100,8 +100,9 @@ plain CSS, so this works exactly the same on GitHub Pages as anywhere else.
     font-size: $responsive-venue;
   }
 
-  .info-page-title {
+  .display-title.info-page-title {
     font-size: $responsive-info-title;
+    text-shadow: -1px 1px 0 $home-text;
   }
 
   .info-heading {
@@ -130,7 +131,7 @@ plain CSS, so this works exactly the same on GitHub Pages as anywhere else.
     font-size: 40px;
   }
 
-  .info-page-title {
+  .display-title.info-page-title {
     font-size: 30px;
   }
 

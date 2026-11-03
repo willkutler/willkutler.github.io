@@ -75,7 +75,7 @@ Home page
 .home-photo {
   display: block;
   width: 100%;
-  max-width: 420px;
+  max-width: 315px;
   height: auto;
   margin: 28px auto 0;
 }
@@ -174,8 +174,10 @@ Info pages (travel)
   padding: 20px 0;
 }
 
-.info-page-title {
+.display-title.info-page-title {
   font-size: $font-size-info-title;
+  // Smaller offset than the home title so it doesn't look detached.
+  text-shadow: -3px 3px 0 $home-text;
   margin-bottom: 36px;
 }
 
