@@ -164,3 +164,39 @@ Placeholder pages
 .placeholder-note {
   color: $txt-muted;
 }
+
+/* ==========================================================================
+Info pages (travel)
+========================================================================== */
+
+.info-page {
+  text-align: center;
+  padding: 20px 0;
+}
+
+.info-page-title {
+  font-size: $font-size-info-title;
+  margin-bottom: 36px;
+}
+
+.info-heading,
+.info-text {
+  font-family: $info-font;
+  font-weight: $normal;
+  text-align: center;
+}
+
+.info-heading {
+  margin: 40px 0 14px;
+  font-size: $font-size-info-heading;
+  line-height: 1.2;
+  color: $info-heading-color;
+}
+
+.info-text {
+  margin: 0 auto 22px;
+  max-width: 640px;
+  font-size: $font-size-info-text;
+  line-height: 1.5;
+  color: $home-text;
+}
