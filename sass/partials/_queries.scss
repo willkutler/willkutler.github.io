@@ -72,8 +72,11 @@ plain CSS, so this works exactly the same on GitHub Pages as anywhere else.
     }
   }
 
+  // Fluid so the title shrinks smoothly with the screen instead of stepping.
   .display-title {
-    font-size: $responsive-display;
+    font-size: clamp(30px, 11vw, $responsive-display);
+    // Shadow offset in em so it shrinks along with the title (about 2px at 40px).
+    text-shadow: -0.05em 0.05em 0 $home-text;
   }
 
   h1 {
@@ -93,11 +96,11 @@ plain CSS, so this works exactly the same on GitHub Pages as anywhere else.
   }
 
   .home-date {
-    font-size: $responsive-date;
+    font-size: clamp(15px, 5.5vw, $responsive-date);
   }
 
   .home-venue {
-    font-size: $responsive-venue;
+    font-size: clamp(9px, 3.3vw, $responsive-venue);
   }
 
   .display-title.info-page-title {
@@ -133,19 +136,7 @@ plain CSS, so this works exactly the same on GitHub Pages as anywhere else.
 }
 
 @media screen and (max-width: 420px) {
-  .display-title {
-    font-size: 40px;
-  }
-
   .display-title.info-page-title {
     font-size: 30px;
-  }
-
-  .home-date {
-    font-size: 20px;
-  }
-
-  .home-venue {
-    font-size: 12px;
   }
 }
