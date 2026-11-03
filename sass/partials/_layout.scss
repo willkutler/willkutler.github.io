@@ -180,7 +180,9 @@ Info pages (travel)
 }
 
 .info-heading,
-.info-text {
+.info-subheading,
+.info-text,
+.info-schedule {
   font-family: $info-font;
   font-weight: $normal;
   text-align: center;
@@ -199,4 +201,35 @@ Info pages (travel)
   font-size: $font-size-info-text;
   line-height: 1.5;
   color: $home-text;
+}
+
+// Underlined mini header: same colour as the body text, slightly larger.
+.info-subheading {
+  margin: 0 0 10px;
+  font-size: $font-size-info-subheading;
+  line-height: 1.3;
+  color: $home-text;
+  text-decoration: underline;
+}
+
+// Schedule: centred on the page as a whole, but the cells inside are
+// left-aligned so the times line up and the descriptions line up.
+.info-schedule {
+  margin: 8px auto 0;
+  border-collapse: collapse;
+  font-size: $font-size-info-text;
+  line-height: 1.5;
+  color: $home-text;
+  text-align: left;
+
+  td {
+    padding: 4px 0;
+    text-align: left;
+    vertical-align: top;
+
+    &:first-child {
+      padding-right: 28px;
+      white-space: nowrap;
+    }
+  }
 }
