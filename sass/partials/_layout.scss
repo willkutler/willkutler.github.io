@@ -72,12 +72,24 @@ Home page
   padding: 54px 52px 46px;
 }
 
+.home-title {
+  margin: 0;
+}
+
+.home-title-image {
+  display: block;
+  width: 100%;
+  max-width: 560px;
+  height: auto;
+  margin: 0 auto;
+}
+
 .home-photo {
   display: block;
   width: 100%;
   max-width: 315px;
   height: auto;
-  margin: 28px auto 0;
+  margin: -30px auto 0;
 }
 
 .home-date,
