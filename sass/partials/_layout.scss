@@ -97,6 +97,13 @@ Home page
   height: auto;
 }
 
+// drop-shadow follows the PNG's transparent edges, so the shadow hugs the frame
+// shape instead of forming a rectangle.
+.home-frame,
+.home-photo {
+  filter: drop-shadow(3px 5px 6px rgba(0, 0, 0, 0.2));
+}
+
 // Widths follow the column but are capped by viewport height so the wall fits
 // on screen, and never drop below the px floor (the size at 1080p).
 .home-side-left {
