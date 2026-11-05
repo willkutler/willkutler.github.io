@@ -140,3 +140,38 @@ plain CSS, so this works exactly the same on GitHub Pages as anywhere else.
     font-size: 30px;
   }
 }
+
+/* ==========================================================================
+Gallery wall stacks
+==========================================================================
+Below this width the side columns would get too narrow for the frames to hold
+their minimum size, so everything stacks under the title panel instead.
+*/
+@media screen and (max-width: 1100px) {
+
+  // Title panel stays on top; both sides of the gallery stack beneath it.
+  .home-stage {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .home-title-panel {
+    order: 0;
+  }
+
+  .home-side {
+    display: contents;
+  }
+
+  .home-side-left,
+  .home-side-right {
+    .home-frame:nth-child(n) {
+      width: 70%;
+      max-width: 300px;
+      order: 1;
+      align-self: center;
+      margin: 24px 0 0;
+    }
+  }
+}
