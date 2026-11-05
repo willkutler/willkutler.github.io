@@ -19,6 +19,9 @@ body {
 
 body {
   background-color: $page-bg;
+  // Tiled wallpaper; the solid colour above shows while it loads.
+  background-image: url('../assets/images/vines-wallpaper-2.jpg');
+  background-repeat: repeat;
 }
 
 img {
