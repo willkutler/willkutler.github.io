@@ -101,6 +101,7 @@ plain CSS, so this works exactly the same on GitHub Pages as anywhere else.
 
   .home-venue {
     font-size: clamp(9px, 3.3vw, $responsive-venue);
+    margin-top: 10px;
   }
 
   .display-title.info-page-title {
