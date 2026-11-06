@@ -108,6 +108,10 @@ plain CSS, so this works exactly the same on GitHub Pages as anywhere else.
     text-shadow: -1px 1px 0 $home-text;
   }
 
+  .info-title-image {
+    width: calc(var(--w) * 0.26px);
+  }
+
   .info-heading {
     font-size: $responsive-info-heading;
   }

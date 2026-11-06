@@ -249,6 +249,21 @@ Info pages (travel)
   margin-bottom: 36px;
 }
 
+// Page titles are images, cropped tight and sized on one shared scale.
+.info-title-heading {
+  margin: 0 0 36px;
+}
+
+.info-title-image {
+  display: block;
+  // One shared scale (--w is the image's pixel width) so the lettering is the
+  // same size on every page.
+  width: calc(var(--w) * 0.355px);
+  height: auto;
+  max-width: 100%;
+  margin: 0 auto;
+}
+
 .info-heading,
 .info-subheading,
 .info-text,
