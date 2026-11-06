@@ -72,23 +72,26 @@ Home page
 
 .home-title-panel {
   text-align: center;
-  padding: 54px 52px 46px;
+  padding: 54px 20px 46px;
 }
 
-// Gallery wall: three frames down each side of the title panel. The offsets and
-// widths below are deliberately uneven so it reads as hung by hand.
+// Gallery wall: a cluster of four frames on each side of the title panel. Each
+// cluster is a loose 2x2 grid; the widths, offsets and slight tilts are
+// deliberately uneven so it reads as hung by hand.
 .home-stage {
   display: grid;
-  grid-template-columns: minmax(0, 1fr) minmax(0, 664px) minmax(0, 1fr);
-  align-items: start;
-  width: 96%;
-  max-width: 1500px;
+  grid-template-columns: minmax(0, 1fr) minmax(0, 600px) minmax(0, 1fr);
+  align-items: center;
+  width: 98%;
+  max-width: 2600px;
   margin: 0 auto;
 }
 
 .home-side {
-  display: flex;
-  flex-direction: column;
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  align-items: start;
+  gap: 0 8%;
   padding: 0 2%;
 }
 
@@ -104,18 +107,19 @@ Home page
   filter: drop-shadow(3px 5px 6px rgba(0, 0, 0, 0.2));
 }
 
-// Widths follow the column but are capped by viewport height so the wall fits
-// on screen, and never drop below the px floor (the size at 1080p).
+// Order in each cluster: top-left, top-right, bottom-left, bottom-right.
 .home-side-left {
-  .home-frame:nth-child(1) { width: max(160px, min(56%, 20vh)); align-self: flex-end; margin-right: 14%; }
-  .home-frame:nth-child(2) { width: max(190px, min(72%, 24vh)); align-self: flex-start; margin-top: 3vh; }
-  .home-frame:nth-child(3) { width: max(140px, min(60%, 18vh)); align-self: flex-end; margin-top: 2vh; margin-right: 24%; }
+  .home-frame:nth-child(1) { width: 69%; justify-self: end; }
+  .home-frame:nth-child(2) { width: 75%; justify-self: center; margin-top: 12%; }
+  .home-frame:nth-child(3) { width: 63%; justify-self: start; margin-left: 36%; margin-top: 10%; }
+  .home-frame:nth-child(4) { width: 72%; justify-self: end; margin-top: 6%; }
 }
 
 .home-side-right {
-  .home-frame:nth-child(1) { width: max(150px, min(52%, 19vh)); align-self: flex-start; margin-left: 20%; }
-  .home-frame:nth-child(2) { width: max(210px, min(76%, 26vh)); align-self: flex-end; margin-top: 3.5vh; }
-  .home-frame:nth-child(3) { width: max(160px, min(62%, 20vh)); align-self: flex-start; margin-top: 2vh; margin-left: 12%; }
+  .home-frame:nth-child(1) { width: 66%; justify-self: end; margin-top: 10%; }
+  .home-frame:nth-child(2) { width: 72%; justify-self: center; }
+  .home-frame:nth-child(3) { width: 74%; justify-self: center; margin-top: 6%; }
+  .home-frame:nth-child(4) { width: 68%; justify-self: start; margin-left: 6%; margin-top: 12%; }
 }
 
 .home-title {

@@ -147,17 +147,20 @@ Gallery wall stacks
 Below this width the side columns would get too narrow for the frames to hold
 their minimum size, so everything stacks under the title panel instead.
 */
-@media screen and (max-width: 1100px) {
+@media screen and (max-width: 1400px) {
 
-  // Title panel stays on top; both sides of the gallery stack beneath it.
+  // Title panel stays on top; both clusters wrap beneath it, two frames a row.
   .home-stage {
     display: flex;
-    flex-direction: column;
-    align-items: center;
+    flex-flow: row wrap;
+    justify-content: center;
+    align-items: flex-start;
+    gap: 20px 4%;
   }
 
   .home-title-panel {
     order: 0;
+    width: 100%;
   }
 
   .home-side {
@@ -167,11 +170,21 @@ their minimum size, so everything stacks under the title panel instead.
   .home-side-left,
   .home-side-right {
     .home-frame:nth-child(n) {
-      width: 70%;
-      max-width: 300px;
+      width: 44%;
+      max-width: 240px;
       order: 1;
-      align-self: center;
-      margin: 24px 0 0;
+      margin: 0;
+      justify-self: auto;
     }
+
+    // Right-hand column sits lower than the left so the rows don't line up.
+    // A transform rather than a margin, so it doesn't add to every row's height.
+    .home-frame:nth-child(even) {
+      transform: translateY(32px);
+    }
+  }
+
+  .home-stage {
+    padding-bottom: 32px; // room for the lowered column
   }
 }
