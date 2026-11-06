@@ -95,6 +95,11 @@ plain CSS, so this works exactly the same on GitHub Pages as anywhere else.
     padding: 8px 8px 32px;
   }
 
+  // Pull the home page up a little; other pages keep the normal top padding.
+  .home-stage {
+    margin-top: -16px;
+  }
+
   .home-date {
     font-size: clamp(15px, 5.5vw, $responsive-date);
   }
