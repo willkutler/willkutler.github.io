@@ -258,7 +258,7 @@ Info pages (travel)
   display: block;
   // One shared scale (--w is the image's pixel width) so the lettering is the
   // same size on every page.
-  width: calc(var(--w) * 0.355px);
+  width: calc(var(--w) * 0.3px);
   height: auto;
   max-width: 100%;
   margin: 0 auto;
